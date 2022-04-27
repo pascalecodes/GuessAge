@@ -1,0 +1,29 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  margin: 0 auto;
+}
+
+h1, h2, h3, button, input{
+  display: flex;
+  justify-self: center;
+}
+.activity{
+  color: green;
+  font-size: large;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
