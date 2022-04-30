@@ -5,7 +5,7 @@
     	<meta name="description" content="This is where your description goes">
     	<meta name="keywords" content="one, two, three">
 
-		<title>Guess your Age</title>
+		<title>Guess Your Age</title>
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
@@ -13,16 +13,26 @@
 	</head>
 	<body>
 		
-		<h1>What is your Name?</h1>
+		<h1>Welcome to GYA fort!</h1>
+		<h2>What is your Name?</h2>
 		<p>The Agify API tries to predict your age from your name. Enter your name below and find out how old the algorithm thinks you are.</p>
 		<input type="text" name="" value="">
-		<button type="button" name="button">Get Birthday Guess</button>
-		<h2>AGE?</h2>
-		<button id= 'boredButton' type="button" name="boredButton">We guessed WRONG!</button>
-		<button id= 'happyButton' type="button" name="happyButton">We guessed RIGHT!!!!!!</button>
-		<h3>Comment</h3>
-		<h3 class="activity"></h3>
+		<button id='bdayButton' type="button" name="bdayButton">Get Birthday Guess</button>
+		<h2 id="age"></h2>
+
+		<button id= 'happyButton' type="button" name="happyButton">✅ RIGHT 😀</button>
+		<h3 id="celebrate"></h3>
 		<img src="">
+		<button id= 'boredButton' type="button" name="boredButton">✖ WRONG 🤡</button>
+		<h3 id="bored"></h3>
+		<h3 class="activity"></h3>
+
+		<button id= 'fortuneButton' type="button" name="fortuneButton">Tell Me My Fortune 🎱 </button>
+		<h3 id="fortune"></h3>
+		
+		
+		
+		
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>

@@ -1,18 +1,34 @@
-//Example fetch using pokemonapi.co
-document.querySelector('button').addEventListener('click', getFetch)
+//Example fetch using agify api, bored api and advice slip api
+document.querySelector('#bdayButton').addEventListener('click', getAge)
 document.querySelector('#boredButton').addEventListener('click', getBored)
 document.querySelector('#happyButton').addEventListener('click', getCelebrate)
+document.getElementById('fortuneButton').addEventListener('click', getAdvice)
+// document.querySelector('#fortuneButton').addEventListener('click',getAdvice)
+function clearContent(){
+  let boreMessage= document.querySelector("#bored").innertText = null
+  let activtyMessage= document.querySelector(".activity").innertText = null
+  let celebrateMessage = document.querySelector("#celebrate").innerText = null
+  let celebrateImage= document.querySelector('img').src = ''
+  let fortuneMessage= document.querySelector('#fortune').innerText= null
+  boredIntro =''
+  activityMessage =''
 
-function getFetch(){
+}
+
+
+
+function getAge(){
   const name = document.querySelector('input').value
   console.log(name)
   const url = `https://api.agify.io/?name=${name}`
+  clearContent()
 
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data) 
-        document.querySelector('h2').innerText = `${data.name} your age is ${data.age}`
+        document.getElementById('age').innerText = `${data.name.toUpperCase()} your age is ${data.age}`;
+        console.log(data.age) 
       })
       .catch(err => {
           console.log(`error ${err}`)
@@ -22,16 +38,18 @@ function getFetch(){
 //Get bored suggestion
 function getBored(){
   const url = 'http://www.boredapi.com/api/activity/'
-  document.querySelector('img').src = ''
+  //document.querySelector('img').src = ''
+  clearContent()
 
   fetch(url)
     .then(res => res.json())
     .then(data => {
       console.log(data)
-      const activityMessage = data.activity;
+      let activityMessage = data.activity;
       // activityMessage.style.color = "green";
-      document.querySelector('h3').innerText = `Of course we can't guess your age from just your name, since you are bored I have a suggestion for how to stay busy:`
-      document.querySelector('.activity').innerText=data.activity
+      let boredIntro = `Of course we can't guess your age from just your name, since you are bored I have a suggestion for how to stay busy:`
+      document.querySelector('#bored').innerText = boredIntro;
+      document.querySelector('.activity').innerText= activityMessage;
     })
     .catch(err => {
       console.log(`error ${err}`)
@@ -40,10 +58,37 @@ function getBored(){
 
 //Get right reaction
 function getCelebrate(){
-  document.querySelector('h3').innerText = `HIP HIP HORRAY`
+  clearContent()
+  document.querySelector("#celebrate").innerText = `HIP HIP HORRAY`
   // document.querySelector('.activity').innerHTML= 
-  const image= '/Users/pdelaunalab/Downloads/class27-materials/guessAge/img/celebration.gif'
+  const image= '/Users/pdelaunalab/Desktop/gitrepo/api_miniapps/guessAge/img/celebration.gif'
   document.querySelector('img').src = image
-  document.querySelector('.activity').innerText=''
+  // document.querySelector('.activity').innerText=''
+  // document.querySelector("#bored").innertText = ' '
+  // document.querySelector(".activity").innertText = ' '
 
+}
+
+//get fortune
+function getAdvice(){
+  // let adviceResult= ''
+  const url = 'https://api.adviceslip.com/advice'
+  // document.querySelector("#bored").innertText = ' '
+  // document.querySelector(".activity").innertText = ' '
+  // document.querySelector("#celebrate").innerText = ' '
+  // document.querySelector('img').src = ' '
+  clearContent()
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      const adviceResult = data.slip.advice
+      // activityMessage.style.color = "green";
+      document.querySelector('#fortune').innerText = adviceResult;
+    })
+    .catch(err => {
+      console.log(`error ${err}`)
+    });
+  // document.querySelector('h3').innerText = adviceResult
 }

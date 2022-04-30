@@ -18,6 +18,7 @@ img{
 h1, h2, h3, button, input{
   display: flex;
   justify-self: center;
+  
 }
 .activity{
   color: green;
