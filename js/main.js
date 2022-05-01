@@ -5,13 +5,12 @@ document.querySelector('#happyButton').addEventListener('click', getCelebrate)
 document.getElementById('fortuneButton').addEventListener('click', getAdvice)
 // document.querySelector('#fortuneButton').addEventListener('click',getAdvice)
 function clearContent(){
-  let boreMessage= document.querySelector("#bored").innertText = null
+  // let boreMessage= document.querySelector("#bored").innertText = null
   let activtyMessage= document.querySelector(".activity").innertText = null
   let celebrateMessage = document.querySelector("#celebrate").innerText = null
   let celebrateImage= document.querySelector('img').src = ''
   let fortuneMessage= document.querySelector('#fortune').innerText= null
-  boredIntro =''
-  activityMessage =''
+
 
 }
 
@@ -47,9 +46,10 @@ function getBored(){
       console.log(data)
       let activityMessage = data.activity;
       // activityMessage.style.color = "green";
-      let boredIntro = `Of course we can't guess your age from just your name, since you are bored I have a suggestion for how to stay busy:`
-      document.querySelector('#bored').innerText = boredIntro;
-      document.querySelector('.activity').innerText= activityMessage;
+      // let boredIntro = `Of course we can't guess your age from just your name, since you are bored I have a suggestion for how to stay busy:`
+      // document.querySelector('#bored').innerText = boredIntro;
+      document.querySelector('.activity').innerText= `GYA guessed your SOUL age but you seem bored GYA has a suggestion for how to you can stay busy: ${activityMessage}`;
+      
     })
     .catch(err => {
       console.log(`error ${err}`)
@@ -63,8 +63,8 @@ function getCelebrate(){
   // document.querySelector('.activity').innerHTML= 
   const image= '/Users/pdelaunalab/Desktop/gitrepo/api_miniapps/guessAge/img/celebration.gif'
   document.querySelector('img').src = image
-  // document.querySelector('.activity').innerText=''
-  // document.querySelector("#bored").innertText = ' '
+  document.querySelector('.activity').innerText=''
+  // document.getElementById('#bored').innertText = ''
   // document.querySelector(".activity").innertText = ' '
 
 }
@@ -86,6 +86,7 @@ function getAdvice(){
       const adviceResult = data.slip.advice
       // activityMessage.style.color = "green";
       document.querySelector('#fortune').innerText = adviceResult;
+      document.querySelector('.activity').innerText=''
     })
     .catch(err => {
       console.log(`error ${err}`)

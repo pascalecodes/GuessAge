@@ -5,34 +5,39 @@
     	<meta name="description" content="This is where your description goes">
     	<meta name="keywords" content="one, two, three">
 
-		<title>Guess Your Age</title>
+		<title>GYA Fortunes</title>
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		
-		<h1>Welcome to GYA fort!</h1>
-		<h2>What is your Name?</h2>
-		<p>The Agify API tries to predict your age from your name. Enter your name below and find out how old the algorithm thinks you are.</p>
-		<input type="text" name="" value="">
-		<button id='bdayButton' type="button" name="bdayButton">Get Birthday Guess</button>
-		<h2 id="age"></h2>
+		<section class= 'mainSection'>
+			<h1>Welcome to GYA Fortune!</h1>
+			<h2>GYA can predict your age from just your name. Enter your name below and find out how old GYA thinks you are.</h2>
 
-		<button id= 'happyButton' type="button" name="happyButton">✅ RIGHT 😀</button>
-		<h3 id="celebrate"></h3>
-		<img src="">
-		<button id= 'boredButton' type="button" name="boredButton">✖ WRONG 🤡</button>
-		<h3 id="bored"></h3>
-		<h3 class="activity"></h3>
+			<section class='nameGuess'>
+				<p>Guess My Age</p>
+				<input type="text" placeholder= "Type in a name" name="" value="">
+				<button id='bdayButton' type="button" name="bdayButton">Get Birthday Guess</button>
+				<h2 id="age"></h2>
+				<button id= 'happyButton' type="button" name="happyButton">✅ RIGHT 😀</button>
+				<h3 id="celebrate"></h3>
+				<img src="">
+				<button id= 'boredButton' type="button" name="boredButton">✖ WRONG 🤡</button>
+				<h3 id="bored"></h3>
+				<h3 class="activity"></h3>
 
-		<button id= 'fortuneButton' type="button" name="fortuneButton">Tell Me My Fortune 🎱 </button>
-		<h3 id="fortune"></h3>
+			</section>
+
+			<section class= 'fortune'>
+				<p>Read My Fortune</p>
+				<button id= 'fortuneButton' type="button" name="fortuneButton">Tell Me My Fortune 🎱 </button>
+				<h3 id="fortune"></h3>
 		
-		
-		
-		
+			</section>
+
+		</section>
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>

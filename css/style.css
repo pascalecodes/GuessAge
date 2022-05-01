@@ -5,23 +5,101 @@
 /* Box Model Hack */
 *{
   box-sizing: border-box;
+  outline: solid 1px red;
+  color: white;
+  margin: 0;
+  padding:0;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
+
+body{ 
+  /* background-image: url('/Users/pdelaunalab/Desktop/gitrepo/api_miniapps/guessAge/img/tarrotbackground.jpg'); */
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+ 
+
+}
+/* body::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0,0,0,0.50);
+} */
+
+section{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.50);
+
+}
+.mainSection{
+  width: 100%;
+  height: 100%;
+}
+.nameGuess, .fortune{
+  width: 50%;
+  height: 70vh;
+  background-size:contain;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  flex-wrap: wrap;
+}
+.nameGuess{
+  background-image: url('/Users/pdelaunalab/Desktop/gitrepo/api_miniapps/guessAge/img/zoltarguess.jpg');
+}
+.fortune{
+  background-image: url('/Users/pdelaunalab/Desktop/gitrepo/api_miniapps/guessAge/img/fortune.jpg');
+}
+
 img{
   display: block;
   margin: 0 auto;
 }
-
-h1, h2, h3, button, input{
+p{
   display: flex;
   justify-self: center;
-  
+  width: 100%;
+  align-items: center;
+}
+h1, h2, h3, p{
+  display: flex;
+  justify-self: center;
+  width: 100%;
+  align-items: center;
+  font-size: 2vh;
+  flex-direction: row;
+}
+h1{
+  font-size: 3vh;
+  flex-direction: row;
+}
+button, input{
+  display: flex;
+  justify-content: center;
+  color: black;
+  width: 15vh;
+  position: relative;
+
 }
 .activity{
-  color: green;
+  color: rgb(13, 236, 247);
   font-size: large;
 }
 
