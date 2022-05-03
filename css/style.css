@@ -16,7 +16,7 @@
 /*******************************************/
 
 body{ 
-  background-image: url('/Users/pdelaunalab/Desktop/gitrepo/api_miniapps/guessAge/img/tarrotbackground.jpg');
+  background-image: url('/img/tarrotbackground.jpg');
   background-size: cover;
   position: relative;
   height: 100vh;
@@ -62,13 +62,13 @@ section{
   flex-wrap: wrap;
 }
 .nameGuess{
-  background-image: url('/Users/pdelaunalab/Desktop/gitrepo/api_miniapps/guessAge/img/zoltarguess.jpg');
+  background-image: url('/img/zoltarguess.jpg');
   background-position:top;
   background-size: 70%;
   opacity: .9;
 }
 .fortune{
-  background-image: url('/Users/pdelaunalab/Desktop/gitrepo/api_miniapps/guessAge/img/fortune.jpg');
+  background-image: url('/img/fortune.jpg');
   background-position: center;
   background-position: bottom;
   opacity: .9;
