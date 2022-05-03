@@ -46,9 +46,9 @@ function getBored(){
       console.log(data)
       let activityMessage = data.activity;
       // activityMessage.style.color = "green";
-      // let boredIntro = `Of course we can't guess your age from just your name, since you are bored I have a suggestion for how to stay busy:`
-      // document.querySelector('#bored').innerText = boredIntro;
-      document.querySelector('.activity').innerText= `GYA guessed your SOUL age but you seem bored GYA has a suggestion for how to you can stay busy: ${activityMessage}`;
+      let boredIntro = `ZORO guessed your SOUL age but you seem bored ZORO has a suggestion for how to you can stay busy:`
+      document.querySelector('#bored').innerText = boredIntro;
+      document.querySelector('.activity').innerText= `${activityMessage}`;
       
     })
     .catch(err => {

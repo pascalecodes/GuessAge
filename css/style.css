@@ -5,7 +5,7 @@
 /* Box Model Hack */
 *{
   box-sizing: border-box;
-  outline: solid 1px red;
+  /* outline: solid 1px red; */
   color: white;
   margin: 0;
   padding:0;
@@ -16,7 +16,7 @@
 /*******************************************/
 
 body{ 
-  /* background-image: url('/Users/pdelaunalab/Desktop/gitrepo/api_miniapps/guessAge/img/tarrotbackground.jpg'); */
+  background-image: url('/Users/pdelaunalab/Desktop/gitrepo/api_miniapps/guessAge/img/tarrotbackground.jpg');
   background-size: cover;
   position: relative;
   height: 100vh;
@@ -63,10 +63,18 @@ section{
 }
 .nameGuess{
   background-image: url('/Users/pdelaunalab/Desktop/gitrepo/api_miniapps/guessAge/img/zoltarguess.jpg');
+  background-position:top;
+  background-size: 70%;
+  opacity: .9;
 }
 .fortune{
   background-image: url('/Users/pdelaunalab/Desktop/gitrepo/api_miniapps/guessAge/img/fortune.jpg');
+  background-position: center;
+  background-position: bottom;
+  opacity: .9;
+  background-size: 70%
 }
+
 
 img{
   display: block;
@@ -75,32 +83,40 @@ img{
 p{
   display: flex;
   justify-self: center;
-  width: 100%;
+  width: 50%;
   align-items: center;
 }
 h1, h2, h3, p{
   display: flex;
-  justify-self: center;
+  justify-content: center;
   width: 100%;
   align-items: center;
-  font-size: 2vh;
+  font-size: 1.5rem;
   flex-direction: row;
 }
 h1{
-  font-size: 3vh;
+  font-size: 2.5rem;
   flex-direction: row;
+  justify-content: center;
+}
+h2{
+  font-size: 2rem;
+  flex-direction: row;
+  justify-content: center;
 }
 button, input{
   display: flex;
   justify-content: center;
   color: black;
-  width: 15vh;
+  width: 10rem;
   position: relative;
+  background: lightgray;
 
 }
 .activity{
-  color: rgb(13, 236, 247);
-  font-size: large;
+  /* color: rgb(13, 236, 247); */
+  color: rgb(228, 247, 13);
+  text-shadow: black;
 }
 
 /******************************************
