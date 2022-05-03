@@ -35,7 +35,7 @@ function getAge(){
 
 //Get bored suggestion
 function getBored(){
-  const url = 'http://www.boredapi.com/api/activity/'
+  const url = 'https://www.boredapi.com/api/activity/'
   //document.querySelector('img').src = ''
   clearContent()
 
