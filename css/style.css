@@ -14,7 +14,12 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
-
+html{
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
 body{ 
   background-image: url('/img/tarrotbackground.jpg');
   background-size: cover;
@@ -51,8 +56,8 @@ section{
   height: 100%;
 }
 .nameGuess, .fortune{
-  width: 50%;
-  height: 70vh;
+  width: 60%;
+  height: 100%;
   background-size:contain;
   background-repeat: no-repeat;
   position: relative;
@@ -103,22 +108,69 @@ h2{
   font-size: 2rem;
   flex-direction: row;
   justify-content: center;
+  padding: 0 1.5rem;
+}
+h3{
+  text-shadow: blue;
 }
 button, input{
   display: flex;
   justify-content: center;
   color: black;
   width: 10rem;
+  height: 1.5rem;
   position: relative;
   background: lightgray;
+}
+input{
+  height: 3rem;
+  width: 15rem;
+  font-size: 2rem;
+  
+}
+#bdayButton{
+  height: 3rem;
+  width: 7rem;
+  font-size: 1.5rem;
+  padding: 0;
+ background-color: yellow;
+}
+#bdayButton:hover{
+  background-color: green;
 
 }
-.activity{
+
+#bored, #activity{
+  height: 10px;
+  width: 70%;
+  padding: 0 1rem;
+  
+}
+#activity{
   /* color: rgb(13, 236, 247); */
-  color: rgb(228, 247, 13);
+  color: rgb(7, 249, 245);
   text-shadow: black;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@media screen and (max-width: 600px){
+  .nameGuess, .fortune{
+    width: 60%;
+    height: 50vh;
+    padding: 0;
+    
+  }
+  #bdayButton{
+    width: 8rem;
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  p{
+    padding: 0px;
+  }
+
+}
+  
