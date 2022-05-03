@@ -73,21 +73,15 @@ function getCelebrate(){
 
 //get fortune
 function getAdvice(){
-  // let adviceResult= ''
+ 
   const url = 'https://api.adviceslip.com/advice'
-  // document.querySelector("#bored").innertText = ' '
-  // document.querySelector(".activity").innertText = ' '
-  // document.querySelector("#celebrate").innerText = ' '
-  // document.querySelector('img').src = ' '
-  //clearContent()
-  // fortuneMessage= document.querySelector('#fortune').classList.toggle('hidden')
+
 
   fetch(url)
     .then(res => res.json())
     .then(data => {
       console.log(data)
       const adviceResult = data.slip.advice
-      // activityMessage.style.color = "green";
       
       document.querySelector('#fortune').innerText = adviceResult;
       document.querySelector('#activity').innerText=''
@@ -96,22 +90,8 @@ function getAdvice(){
     .catch(err => {
       console.log(`error ${err}`)
     });
-  // document.querySelector('h3').innerText = adviceResult
+ 
 }
 
 
 
-
-// const andi = document.querySelector('#andi')
-// const claire = document.querySelector('#claire')
-// const sharleen = document.querySelector('#sharleen')
-
-// document.querySelector('#andiNext').addEventListener('click', andiNext)
-// document.querySelector('#claireNext').addEventListener('click', claireNext)
-// document.querySelector('#sharleenNext').addEventListener('click', sharleenNext)
-
-// function claireNext(){
-// 	claire.classList.toggle('hidden')
-// 	andi.classList.add('hidden')
-// 	sharleen.classList.add('hidden')
-// }
