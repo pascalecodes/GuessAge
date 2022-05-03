@@ -63,7 +63,7 @@ function getCelebrate(){
   document.querySelector("#celebrate").innerText = `HIP HIP HORRAY`
   
   // document.querySelector('.activity').innerHTML= 
-  const image= '/Users/pdelaunalab/Desktop/gitrepo/api_miniapps/guessAge/img/celebration.gif'
+  const image= 'https://media3.giphy.com/media/XdUzjIkQ4tmDQwYckP/giphy-downsized-large.gif'
   document.querySelector('img').src = image;
   document.querySelector('#activity').innerText=' ';
   document.querySelector('#bored').innerText = ' ';
